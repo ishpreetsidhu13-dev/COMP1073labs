@@ -23,7 +23,6 @@ function updateDisplay() {
     document.getElementById("pet-profile").textContent = description;
     document.getElementById("name-input").value = petName;
 }
-
 // Event listeners
 document.getElementById("generate-btn").addEventListener("click", generatePet);
 
@@ -44,5 +43,4 @@ document.getElementById("age-down").addEventListener("click", function() {
     updateDisplay();
 });
 
-// Start random pet
 generatePet();
