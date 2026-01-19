@@ -13,7 +13,9 @@ function generatePet() {
     petAge = Math.floor(Math.random() * 10) + 1;
     
     updateDisplay();
+
 }
+
 // Update display
 function updateDisplay() {
     let description = "This is " + petName + ", your adorable " + petAge + " year old " + petType + ". " + petName + " is a cutest pet!";
@@ -42,5 +44,5 @@ document.getElementById("age-down").addEventListener("click", function() {
     updateDisplay();
 });
 
-// Start with random pet
+// Start random pet
 generatePet();
