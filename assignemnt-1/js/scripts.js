@@ -30,3 +30,21 @@ const randomStoryBtn = document.getElementById("randomStory");
 const resetBtn = document.getElementById("reset");
 const storyOutput = document.getElementById("storyOutput");
 
+// Array
+const partKeys = ["part1", "part2", "part3", "part4", "part5"];
+
+// Cycle
+function cycleWord(partKey) {
+    const currentPos = currentIndex[partKey];
+    const wordList = words[partKey];
+    const nextPos = (currentPos + 1) % wordList.length;
+    currentIndex[partKey] = nextPos;
+    return wordList[nextPos];
+}
+
+
+function buildStory() {
+    const storyParts = partKeys.map(key => words[key][currentIndex[key]]);
+    return storyParts.join(" ") + ".";
+}
+
