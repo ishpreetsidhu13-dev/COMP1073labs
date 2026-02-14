@@ -48,3 +48,65 @@ function buildStory() {
     return storyParts.join(" ") + ".";
 }
 
+// UpdateButton
+function updateButtonDisplay(buttonIndex) {
+    const key = partKeys[buttonIndex];
+    partButtons[buttonIndex].textContent = words[key][currentIndex[key]];
+}
+
+// Buttons
+function initButtons() {
+    partKeys.forEach((key, index) => {
+        partButtons[index].textContent = words[key][0];
+    });
+}
+
+
+function setupPartButtonHandlers() {
+    partButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+            const newWord = cycleWord(partKeys[index]);
+            button.textContent = newWord;
+        });
+    });
+}
+
+// currentstory
+function showStory() {
+    const story = buildStory();
+    storyOutput.textContent = story;
+    storyOutput.classList.remove("placeholder");
+}
+
+// random
+function randomStory() {
+    partKeys.forEach((key, index) => {
+        const randomPos = Math.floor(Math.random() * words[key].length);
+        currentIndex[key] = randomPos;
+        partButtons[index].textContent = words[key][randomPos];
+    });
+    showStory();
+}
+
+// Reset
+function resetStory() {
+    partKeys.forEach((key, index) => {
+        currentIndex[key] = 0;
+        partButtons[index].textContent = words[key][0];
+    });
+    storyOutput.textContent = "Click here";
+    storyOutput.classList.add("placeholder");
+}
+
+
+function init() {
+    initButtons();
+    setupPartButtonHandlers();
+    
+    showStoryBtn.addEventListener("click", showStory);
+    randomStoryBtn.addEventListener("click", randomStory);
+    resetBtn.addEventListener("click", resetStory);
+}
+
+
+init();
