@@ -42,3 +42,19 @@ function createToyCar() {
   updateList();
   form.reset();
 }
+// Random
+function generateRandomCar() {
+  const brands = ['Toyota', 'Ford','Dodge', 'BMW', 'Land Rover', 'Honda', ];
+  const models = ['FreeLander', 'Mustang', 'Charger', '3 Series', 'Range Rover', 'Civic', ];
+  const b = brands[Math.floor(Math.random() * brands.length)];
+  const m = models[Math.floor(Math.random() * models.length)];
+  const y = 2015 + Math.floor(Math.random() * 10);
+  const c = COLORS[Math.floor(Math.random() * COLORS.length)];
+  const p = (10 + Math.random() * 30).toFixed(2);
+  
+  document.getElementById('brand').value = b;
+  document.getElementById('model').value = m;
+  document.getElementById('year').value = y;
+  document.getElementById('colour').value = c;
+  document.getElementById('price').value = p;
+}
