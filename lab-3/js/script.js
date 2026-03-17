@@ -24,3 +24,21 @@ function ToyCar(b, m, y, c, p) {
   this.price = p;
   this.toString = () => `${b} ${m}: ${c}. $${p}`;
 }
+// Create
+function createToyCar() {
+  const b = document.getElementById('brand').value;
+  const m = document.getElementById('model').value;
+  const y = parseInt(document.getElementById('year').value);
+  const c = document.getElementById('colour').value;
+  const p = parseFloat(document.getElementById('price').value);
+  
+  if (!b || !m || !p || y < 1900 || y > 2024) {
+    alert('Fix inputs');
+    return;
+  }
+  
+  const car = new ToyCar(b, m, y, c, p);
+  cars.push(car);
+  updateList();
+  form.reset();
+}
