@@ -58,3 +58,12 @@ function generateRandomCar() {
   document.getElementById('colour').value = c;
   document.getElementById('price').value = p;
 }
+// List
+function updateList() {
+  carsUl.innerHTML = '';
+  for (let i = 0; i < cars.length; i++) {
+    const li = document.createElement('li');
+    li.textContent = cars[i].toString();
+    carsUl.appendChild(li);
+  }
+}
