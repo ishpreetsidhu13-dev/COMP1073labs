@@ -14,3 +14,13 @@ form.addEventListener('submit', (e) => {
   createToyCar();
 });
 randomBtn.addEventListener('click', generateRandomCar);
+// Constructor
+function ToyCar(b, m, y, c, p) {
+  this.id = nextId++;
+  this.brand = b;
+  this.model = m;
+  this.year = y;
+  this.colour = c;
+  this.price = p;
+  this.toString = () => `${b} ${m}: ${c}. $${p}`;
+}
