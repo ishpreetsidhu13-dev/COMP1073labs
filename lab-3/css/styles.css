@@ -54,3 +54,46 @@ button {
     margin-right: 10px;
     margin-bottom: 20px;
 }
+
+/* Random button */
+#randomBtn {
+    background-color: #e74c3c; 
+}
+
+#randomBtn:hover {
+    background-color: #c0392b; 
+}
+
+/* Cars list */
+#carsList {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+}
+
+/* List items */
+#carsUl {
+    list-style: none;
+    padding: 0;
+}
+
+#carsUl li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 10px;
+    }
+    
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
