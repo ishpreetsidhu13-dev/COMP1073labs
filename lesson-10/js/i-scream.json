@@ -41,16 +41,16 @@
       "image" : "strawberry-sprinkle.svg"
     },
     {
-      "name" : "Mango Madness",
+      "name" : "Dry fruit",
       "calories" : 400,
       "type" : "ice cream",
       "ingredients" : [
         "calories : 400",
-        "mango purée",
-        "coconut cream",
-        "lime juice"
+        "mixed nuts",
+        "dried fruits",
+        "honey"
       ],
-      "image" : "peach-mango.svg"
+      "image" : "ice-cream-xtra2.svg"
     }
   ]
 }
