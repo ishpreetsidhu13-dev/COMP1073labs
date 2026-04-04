@@ -75,3 +75,18 @@ function createTaskItem(task, index) {
   li.appendChild(text);
   li.appendChild(removeBtn);
   taskList.appendChild(li);
+
+
+
+  // checkbox 
+  check.addEventListener("change", function () {
+    myTasks[index].done = check.checked;
+    displayAllTasks();
+  });
+
+  // delete
+  removeBtn.addEventListener("click", function () {
+    myTasks.splice(index, 1);
+    displayAllTasks();
+  });
+}
