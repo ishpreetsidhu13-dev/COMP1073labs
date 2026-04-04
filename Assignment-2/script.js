@@ -11,3 +11,22 @@ addButton.addEventListener("click", addNewTask);
 
 
 ;
+// function to add task
+function addNewTask() {
+  let userText = taskInput.value.trim();
+
+  if (userText === "") {
+    alert("Please enter something");
+    return;
+  }
+
+  let newTask = {
+    text: userText,
+    done: false
+  };
+
+  myTasks.push(newTask);
+  displayAllTasks();
+
+  taskInput.value = "";
+}
