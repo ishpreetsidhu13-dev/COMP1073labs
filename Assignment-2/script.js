@@ -46,3 +46,10 @@ function displayAllTasks() {
       createTaskItem(myTasks[i], i);
     }
   } 
+    // show completed
+  for (let i = 0; i < myTasks.length; i++) {
+    if (myTasks[i].done === true) {
+      createTaskItem(myTasks[i], i);
+    }
+  }
+}
