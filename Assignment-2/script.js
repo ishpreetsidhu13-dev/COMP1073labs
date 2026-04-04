@@ -36,4 +36,13 @@ function addNewTask() {
 // github not woeking
 
 //still not working
- wwwgwwww
+// show all tasks
+function displayAllTasks() {
+  taskList.innerHTML = "";
+
+  // show unfinished first
+  for (let i = 0; i < myTasks.length; i++) {
+    if (myTasks[i].done === false) {
+      createTaskItem(myTasks[i], i);
+    }
+  } 
