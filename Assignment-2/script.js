@@ -53,3 +53,25 @@ function displayAllTasks() {
     }
   }
 }
+// create task
+function createTaskItem(task, index) {
+  let li = document.createElement("li");
+
+  let check = document.createElement("input");
+  check.type = "checkbox";
+  check.checked = task.done;
+
+  let text = document.createElement("span");
+  text.textContent = task.text;
+
+  if (task.done === true) {
+    text.classList.add("completed");
+  }
+
+  let removeBtn = document.createElement("button");
+  removeBtn.textContent = "Delete";
+
+  li.appendChild(check);
+  li.appendChild(text);
+  li.appendChild(removeBtn);
+  taskList.appendChild(li);
