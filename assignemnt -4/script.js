@@ -35,3 +35,26 @@ function showFeatured(gif) {
     </article>
   `;
 }
+
+//display gifs in the results section
+function showGifs(gifs) {
+  for (let i = 0; i < gifs.length; i++) {
+    let gif = gifs[i];
+
+    let title = gif.title || "No title";
+    let username = gif.username || "Unknown";
+    let rating = gif.rating ? gif.rating.toUpperCase() : "N/A";
+
+    let card = document.createElement("article");
+    card.className = "card";
+
+    card.innerHTML = `
+      <img src="${gif.images.fixed_width.url}" alt="${title}">
+      <h4>${title}</h4>
+      <p>By: ${username}</p>
+      <p>Rating: ${rating}</p>
+    `;
+
+    results.appendChild(card);
+  }
+}
