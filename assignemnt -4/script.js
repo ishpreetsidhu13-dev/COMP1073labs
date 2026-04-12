@@ -20,4 +20,18 @@ function clearResults() {
   results.innerHTML = "";
 }
 
+// Show featured GIF
+function showFeatured(gif) {
+  let title = gif.title || "No title";
+  let username = gif.username || "Unknown";
+  let rating = gif.rating ? gif.rating.toUpperCase() : "N/A";
 
+  featuredResult.innerHTML = `
+    <article class="featured-card">
+      <img src="${gif.images.fixed_width.url}" alt="${title}">
+      <h3>${title}</h3>
+      <p>Username: ${username}</p>
+      <p>Rating: ${rating}</p>
+    </article>
+  `;
+}
