@@ -11,4 +11,13 @@ const statusMessage = document.querySelector("#statusMessage");
 const featuredResult = document.querySelector("#featuredResult");
 const results = document.querySelector("#results");
 
+//  Show message and clear results
+function showStatus(message) {
+  statusMessage.textContent = message;
+}
+function clearResults() {
+  featuredResult.innerHTML = "";
+  results.innerHTML = "";
+}
+
 
