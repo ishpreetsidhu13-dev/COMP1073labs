@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GIPHY API Demo | COMP1073 Client-Side JavaScript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href=styles.css>
+  <script src="script.js" defer></script>
+</head>
+<body>
+ <header>
+    <h1>GIPHY API Demo</h1>
+    <p>
+      This page uses the GIPHY API to load trending GIFs and search for GIFs with JavaScript.
+    </p>
+  </header>
+    <main>
+    <section>
+      <h2>Search</h2>
+      <p>
+        <label for="searchInput">Enter a search term:</label>
+      </p>
+      <p>
+        <input type="text" id="searchInput" placeholder="Try cats, dancing, happy" />
+        <button id="searchBtn" type="button">Search</button>
+        <button id="trendingBtn" type="button">Load Trending GIFs</button>
+      </p>
+    </section>
+
+    <section>
+      <h2>Status</h2>
+      <p id="statusMessage">Loading...</p>
+    </section>
+    <section>
+      <h2>Featured Result</h2>
+      <div id="featuredResult"></div>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <div id="results"></div>
+    </section>
+
+    <section>
+      <h2>Documentation</h2>
+      <p>
+        <a href="https://developers.giphy.com/docs/api/" target="_blank" rel="noopener noreferrer">
+          GIPHY API Quickstart Guide
+        </a>
+      </p>
+      <p>
+        <a href="https://developers.giphy.com/docs/api/endpoint/" target="_blank" rel="noopener noreferrer">
+          GIPHY Endpoint Documentation
+        </a>
+      </p>
+          </section>
+  </main>
+</body>
+</html>
