@@ -58,3 +58,4 @@ function showGifs(gifs) {
     results.appendChild(card);
   }
 }
+
