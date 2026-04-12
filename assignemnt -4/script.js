@@ -98,3 +98,23 @@ async function searchGifs() {
     showStatus("Error loading data");
   }
 }
+// Load trending GIFs
+async function loadTrending() {
+  showStatus("Loading trending...");
+  clearResults();
+
+  try {
+    let url = `${trendingUrl}?api_key=${API_KEY}&limit=6`;
+    let response = await fetch(url);
+    let data = await response.json();
+
+    console.log(data);
+
+    displayData(data.data);
+
+  } catch (error) {
+    console.log(error);
+    showStatus("Error loading trending");
+  }
+}
+
