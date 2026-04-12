@@ -89,3 +89,12 @@ async function searchGifs() {
     let data = await response.json();
 
     console.log(data); 
+// for checking JSON
+
+    displayData(data.data);
+
+  } catch (error) {
+    console.log(error);
+    showStatus("Error loading data");
+  }
+}
