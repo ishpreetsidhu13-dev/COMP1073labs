@@ -58,4 +58,34 @@ function showGifs(gifs) {
     results.appendChild(card);
   }
 }
+// Display data from API
+function displayData(gifs) {
+  clearResults();
 
+  if (gifs.length === 0) {
+    showStatus("No results found");
+    return;
+  }
+
+  showStatus("Showing results");
+  showFeatured(gifs[0]);
+  showGifs(gifs.slice(1));
+}
+// Search GIFs
+async function searchGifs() {
+  let query = searchInput.value.trim();
+
+  if (query === "") {
+    showStatus("Enter something to search");
+    return;
+  }
+
+  showStatus("Searching...");
+  clearResults();
+
+  try {
+    let url = `${searchUrl}?api_key=${API_KEY}&q=${query}&limit=6`;
+    let response = await fetch(url);
+    let data = await response.json();
+
+    console.log(data); 
