@@ -118,3 +118,19 @@ async function loadTrending() {
   }
 }
 
+//script 
+//button event
+searchBtn.addEventListener("click", searchGifs);
+trendingBtn.addEventListener("click", loadTrending);
+//enter seacrh
+searchInput.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    searchGifs();
+  }
+});
+loadTrending();
+/*
+Documentation:
+https://developers.giphy.com/docs/api/
+*/
+
